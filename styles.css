@@ -104,11 +104,20 @@ body.light-mode .pdf-button:hover {
 }
 
 body.light-mode .theme-toggle {
-    background: #795e26;
+    background: #313131;
+    color: whitesmoke;
 }
 
 body.light-mode .theme-toggle:hover {
-    background: #5d4a1f;
+    background: #272727;
+}
+
+body.light-mode .lang-toggle {
+    background: #ce9178;
+}
+
+body.light-mode .lang-toggle:hover {
+    background: #b07d64;
 }
 
 .container {
@@ -298,7 +307,7 @@ a:hover {
     position: fixed;
     top: 70px;
     right: 20px;
-    background: #dcdcaa;
+    background: #dddddd;
     color: #1e1e1e;
     border: none;
     padding: 12px 24px;
@@ -313,14 +322,37 @@ a:hover {
 }
 
 .theme-toggle:hover {
-    background: #c5c287;
+    background: #f8f8f8;
+}
+
+.lang-toggle {
+    position: fixed;
+    top: 120px;
+    right: 20px;
+    background: #ce9178;
+    color: #1e1e1e;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s;
+    z-index: 1000;
+}
+
+.lang-toggle:hover {
+    background: #b07d64;
 }
 
 @media print {
 
     /* Hide UI elements */
     .pdf-button,
-    .theme-toggle {
+    .theme-toggle,
+    .lang-toggle {
         display: none !important;
     }
 
@@ -450,6 +482,16 @@ a:hover {
     .theme-toggle {
         position: static;
         width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .lang-toggle {
+        position: static;
+        width: 100%;
         margin-bottom: 20px;
     }
+}
+
+.uniform-btn {
+    min-width: 15rem;
 }
